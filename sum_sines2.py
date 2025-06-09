@@ -30,11 +30,27 @@ def _(mo):
     freq1 = mo.ui.slider(0, 100, value=1, label="frequency 1")
     ofs1 = mo.ui.slider(0, 1, value=0, step=0.01, label="offset 1")
 
-    amp2 = mo.ui.slider(0, 5, value=0.5, step=0.01, label="amplitude 1")
+    amp2 = mo.ui.slider(0, 5, value=0.5, step=0.01, label="amplitude 2")
     freq2 = mo.ui.slider(0, 100, value=1, label="frequency 2")
     ofs2 = mo.ui.slider(0, 1, value=0, step=0.01, label="offset 2")
 
-    amp1, freq1, ofs1, amp2, freq2, ofs2
+    mo.md(f"""
+    <table>
+    <tr>
+    <td>
+    {amp1}
+    {freq1}
+    {ofs1}
+    </td>
+    <td>
+    {amp2}
+    {freq2}
+    {ofs2}
+    </td>
+    </tr>
+    </table>
+    """)
+
     return amp1, amp2, freq1, freq2, ofs1, ofs2
 
 
