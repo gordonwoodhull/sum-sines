@@ -38,7 +38,7 @@ amp2, freq2, ofs2
 
 ```python {.marimo}
 #| editor: true
-
+#| echo: true
 # Create sine wave with Altair
 import altair as alt
 import numpy as np
