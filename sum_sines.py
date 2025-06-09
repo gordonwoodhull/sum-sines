@@ -16,7 +16,7 @@ def _(mo):
         r"""
     ## Sum of Sines in Marimo
 
-    The Altair chart below  what if i shows the sum of two sine waves.
+    The Altair chart below shows the sum of two sine waves.
 
     You can adjust the parameters here:
     """
