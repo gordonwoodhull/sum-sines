@@ -35,20 +35,12 @@ def _(mo):
     ofs2 = mo.ui.slider(0, 1, value=0, step=0.01, label="offset 2")
 
     mo.md(f"""
-    <table>
-    <tr>
-    <td>
-    {amp1}
-    {freq1}
-    {ofs1}
-    </td>
-    <td>
-    {amp2}
-    {freq2}
-    {ofs2}
-    </td>
-    </tr>
-    </table>
+    |  |  |
+    | ------- | ------- |
+    | {amp1}  | {amp2}  |
+    | {freq1} | {freq2} |
+    | {ofs1}  | {ofs2}  |
+
     """)
 
     return amp1, amp2, freq1, freq2, ofs1, ofs2
