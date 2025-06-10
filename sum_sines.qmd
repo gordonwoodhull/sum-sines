@@ -8,7 +8,38 @@ filters:
 
 ## Sum of Sines in Marimo
 
-The Altair chart below shows the sum of two sine waves.
+
+```{.python .marimo}
+# Create sine wave with Altair
+import altair as alt
+import numpy as np
+import pandas as pd
+
+# Create data for a sine wave
+x = np.linspace(0, 1, 300)
+y1 = amp1.value * np.sin((x + ofs1.value)*freq1.value*2*np.pi)
+y2 = amp2.value * np.sin((x + ofs2.value)*freq2.value*2*np.pi)
+sine_data = pd.DataFrame({'x': x, 'y': y1 + y2})
+
+# Create the sine wave plot with Altair
+sine_chart = alt.Chart(sine_data).mark_line(
+    color='blue', 
+    strokeWidth=2
+).add_params(
+    alt.selection_interval(bind='scales')  # Makes chart zoomable/pannable
+).encode(
+    x=alt.X('x:Q', title='x (radians)'),
+    y=alt.Y('y:Q', title='sin(x)')
+).properties(
+    title='Sum of Sine Waves',
+    width=500,
+    height=300
+).interactive()
+
+sine_chart
+```
+
+The Altair chart above shows the sum of two sine waves.
 
 You can adjust the parameters here:
 
@@ -45,36 +76,4 @@ mo.md(f"""
 ```
 :::
 :::
-
-```{.python .marimo}
-#| editor: true
-#| echo: true
-# Create sine wave with Altair
-import altair as alt
-import numpy as np
-import pandas as pd
-
-# Create data for a sine wave
-x = np.linspace(0, 1, 300)
-y1 = amp1.value * np.sin((x + ofs1.value)*freq1.value*2*np.pi)
-y2 = amp2.value * np.sin((x + ofs2.value)*freq2.value*2*np.pi)
-sine_data = pd.DataFrame({'x': x, 'y': y1 + y2})
-
-# Create the sine wave plot with Altair
-sine_chart = alt.Chart(sine_data).mark_line(
-    color='blue', 
-    strokeWidth=2
-).add_params(
-    alt.selection_interval(bind='scales')  # Makes chart zoomable/pannable
-).encode(
-    x=alt.X('x:Q', title='x (radians)'),
-    y=alt.Y('y:Q', title='sin(x)')
-).properties(
-    title='Sum of Sine Waves',
-    width=500,
-    height=300
-).interactive()
-
-sine_chart
-```
 

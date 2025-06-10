@@ -12,41 +12,11 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(
-        r"""
-    ## Sum of Sines in Marimo
-
-    The Altair chart below shows the sum of two sine waves.
-
-    You can adjust the parameters here:
-    """
-    )
+    mo.md(r"""## Sum of Sines in Marimo""")
     return
 
 
-@app.cell
-def _(mo):
-    amp1 = mo.ui.slider(0, 5, value=0.5, step=0.01, label="amplitude 1")
-    freq1 = mo.ui.slider(0, 100, value=1, label="frequency 1")
-    ofs1 = mo.ui.slider(0, 1, value=0, step=0.01, label="offset 1")
-
-    amp2 = mo.ui.slider(0, 5, value=0.5, step=0.01, label="amplitude 2")
-    freq2 = mo.ui.slider(0, 100, value=1, label="frequency 2")
-    ofs2 = mo.ui.slider(0, 1, value=0, step=0.01, label="offset 2")
-
-    mo.md(f"""
-    |  |  |
-    | ------- | ------- |
-    | {amp1}  | {amp2}  |
-    | {freq1} | {freq2} |
-    | {ofs1}  | {ofs2}  |
-
-    """)
-
-    return amp1, amp2, freq1, freq2, ofs1, ofs2
-
-
-@app.cell
+@app.cell(hide_code=True)
 def _(amp1, amp2, freq1, freq2, ofs1, ofs2):
     # Create sine wave with Altair
     import altair as alt
@@ -76,6 +46,40 @@ def _(amp1, amp2, freq1, freq2, ofs1, ofs2):
 
     sine_chart
     return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    The Altair chart above shows the sum of two sine waves.
+
+    You can adjust the parameters here:
+    """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    amp1 = mo.ui.slider(0, 5, value=0.5, step=0.01, label="amplitude 1")
+    freq1 = mo.ui.slider(0, 100, value=1, label="frequency 1")
+    ofs1 = mo.ui.slider(0, 1, value=0, step=0.01, label="offset 1")
+
+    amp2 = mo.ui.slider(0, 5, value=0.5, step=0.01, label="amplitude 2")
+    freq2 = mo.ui.slider(0, 100, value=1, label="frequency 2")
+    ofs2 = mo.ui.slider(0, 1, value=0, step=0.01, label="offset 2")
+
+    mo.md(f"""
+    |  |  |
+    | ------- | ------- |
+    | {amp1}  | {amp2}  |
+    | {freq1} | {freq2} |
+    | {ofs1}  | {ofs2}  |
+
+    """)
+
+    return amp1, amp2, freq1, freq2, ofs1, ofs2
 
 
 @app.cell
