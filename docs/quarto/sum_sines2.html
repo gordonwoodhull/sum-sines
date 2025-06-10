@@ -80,33 +80,41 @@ ul.task-list li input[type="checkbox"] {
 </marimo-island>
 <section id="sum-of-sines-in-marimo" class="level2">
 <h2 class="anchored" data-anchor-id="sum-of-sines-in-marimo">Sum of Sines in Marimo</h2>
-<p>The Altair chart below shows the sum of two sine waves.</p>
-<p>You can adjust the parameters here:</p>
 <marimo-island data-app-id="main" data-cell-id="MJUe" data-reactive="true">
-            <marimo-cell-output>
-            <span class="markdown prose dark:prose-invert"><table>
-<tbody><tr>
-<td>
-<marimo-ui-element object-id="MJUe-0" random-id="adfd6e78-3079-2acb-a554-b5ba3f532204"><marimo-slider data-initial-value="0.5" data-label="&quot;<span class=\&quot;markdown prose dark:prose-invert\&quot;><span class=\&quot;paragraph\&quot;>amplitude 1</span></span>&quot;" data-start="0" data-stop="5" data-step="0.01" data-steps="[]" data-debounce="false" data-disabled="false" data-orientation="&quot;horizontal&quot;" data-show-value="false" data-include-input="false" data-full-width="false"></marimo-slider></marimo-ui-element>
-<marimo-ui-element object-id="MJUe-1" random-id="411bb637-d8f5-de39-5853-eeea0a656e7f"><marimo-slider data-initial-value="1" data-label="&quot;<span class=\&quot;markdown prose dark:prose-invert\&quot;><span class=\&quot;paragraph\&quot;>frequency 1</span></span>&quot;" data-start="0" data-stop="100" data-steps="[]" data-debounce="false" data-disabled="false" data-orientation="&quot;horizontal&quot;" data-show-value="false" data-include-input="false" data-full-width="false"></marimo-slider></marimo-ui-element>
-<marimo-ui-element object-id="MJUe-2" random-id="4240a36b-26ea-fb5c-f290-df29dc05597b"><marimo-slider data-initial-value="0" data-label="&quot;<span class=\&quot;markdown prose dark:prose-invert\&quot;><span class=\&quot;paragraph\&quot;>offset 1</span></span>&quot;" data-start="0" data-stop="1" data-step="0.01" data-steps="[]" data-debounce="false" data-disabled="false" data-orientation="&quot;horizontal&quot;" data-show-value="false" data-include-input="false" data-full-width="false"></marimo-slider></marimo-ui-element>
-</td>
-<td>
-<marimo-ui-element object-id="MJUe-3" random-id="20df6ecf-473d-d705-7aee-810c4a44707e"><marimo-slider data-initial-value="0.5" data-label="&quot;<span class=\&quot;markdown prose dark:prose-invert\&quot;><span class=\&quot;paragraph\&quot;>amplitude 2</span></span>&quot;" data-start="0" data-stop="5" data-step="0.01" data-steps="[]" data-debounce="false" data-disabled="false" data-orientation="&quot;horizontal&quot;" data-show-value="false" data-include-input="false" data-full-width="false"></marimo-slider></marimo-ui-element>
-<marimo-ui-element object-id="MJUe-4" random-id="4a274b23-63b3-2ab3-975f-1b8a326f7d17"><marimo-slider data-initial-value="1" data-label="&quot;<span class=\&quot;markdown prose dark:prose-invert\&quot;><span class=\&quot;paragraph\&quot;>frequency 2</span></span>&quot;" data-start="0" data-stop="100" data-steps="[]" data-debounce="false" data-disabled="false" data-orientation="&quot;horizontal&quot;" data-show-value="false" data-include-input="false" data-full-width="false"></marimo-slider></marimo-ui-element>
-<marimo-ui-element object-id="MJUe-5" random-id="d54d0ab4-baf1-e004-2ab6-a54d5f75dbee"><marimo-slider data-initial-value="0" data-label="&quot;<span class=\&quot;markdown prose dark:prose-invert\&quot;><span class=\&quot;paragraph\&quot;>offset 2</span></span>&quot;" data-start="0" data-stop="1" data-step="0.01" data-steps="[]" data-debounce="false" data-disabled="false" data-orientation="&quot;horizontal&quot;" data-show-value="false" data-include-input="false" data-full-width="false"></marimo-slider></marimo-ui-element>
-</td>
-</tr>
-</tbody></table></span>
-            </marimo-cell-output>
-            <marimo-cell-code hidden="">amp1%20%3D%20mo.ui.slider(0%2C%205%2C%20value%3D0.5%2C%20step%3D0.01%2C%20label%3D%22amplitude%201%22)%0Afreq1%20%3D%20mo.ui.slider(0%2C%20100%2C%20value%3D1%2C%20label%3D%22frequency%201%22)%0Aofs1%20%3D%20mo.ui.slider(0%2C%201%2C%20value%3D0%2C%20step%3D0.01%2C%20label%3D%22offset%201%22)%0A%0Aamp2%20%3D%20mo.ui.slider(0%2C%205%2C%20value%3D0.5%2C%20step%3D0.01%2C%20label%3D%22amplitude%202%22)%0Afreq2%20%3D%20mo.ui.slider(0%2C%20100%2C%20value%3D1%2C%20label%3D%22frequency%202%22)%0Aofs2%20%3D%20mo.ui.slider(0%2C%201%2C%20value%3D0%2C%20step%3D0.01%2C%20label%3D%22offset%202%22)%0A%0Amo.md(f%22%22%22%0A%3Ctable%3E%0A%3Ctr%3E%0A%3Ctd%3E%0A%7Bamp1%7D%0A%7Bfreq1%7D%0A%7Bofs1%7D%0A%3C%2Ftd%3E%0A%3Ctd%3E%0A%7Bamp2%7D%0A%7Bfreq2%7D%0A%7Bofs2%7D%0A%3C%2Ftd%3E%0A%3C%2Ftr%3E%0A%3C%2Ftable%3E%0A%22%22%22)%0A</marimo-cell-code>
-        </marimo-island>
-<marimo-island data-app-id="main" data-cell-id="vblA" data-reactive="true">
     <marimo-cell-output>
     <marimo-mime-renderer data-mime="&quot;application/vnd.marimo+error&quot;" data-data="[{&quot;msg&quot;: &quot;No module named 'altair'&quot;, &quot;exception_type&quot;: &quot;ModuleNotFoundError&quot;, &quot;raising_cell&quot;: null, &quot;type&quot;: &quot;exception&quot;}]"></marimo-mime-renderer>
     </marimo-cell-output>
     <marimo-cell-code hidden="">%23%20Create%20sine%20wave%20with%20Altair%0Aimport%20altair%20as%20alt%0Aimport%20numpy%20as%20np%0Aimport%20pandas%20as%20pd%0A%0A%23%20Create%20data%20for%20a%20sine%20wave%0Ax%20%3D%20np.linspace(0%2C%201%2C%20300)%0Ay1%20%3D%20amp1.value%20*%20np.sin((x%20%2B%20ofs1.value)*freq1.value*2*np.pi)%0Ay2%20%3D%20amp2.value%20*%20np.sin((x%20%2B%20ofs2.value)*freq2.value*2*np.pi)%0Asine_data%20%3D%20pd.DataFrame(%7B'x'%3A%20x%2C%20'y'%3A%20y1%20%2B%20y2%7D)%0A%0A%23%20Create%20the%20sine%20wave%20plot%20with%20Altair%0Asine_chart%20%3D%20alt.Chart(sine_data).mark_line(%0A%20%20%20%20color%3D'blue'%2C%20%0A%20%20%20%20strokeWidth%3D2%0A).add_params(%0A%20%20%20%20alt.selection_interval(bind%3D'scales')%20%20%23%20Makes%20chart%20zoomable%2Fpannable%0A).encode(%0A%20%20%20%20x%3Dalt.X('x%3AQ'%2C%20title%3D'x%20(radians)')%2C%0A%20%20%20%20y%3Dalt.Y('y%3AQ'%2C%20title%3D'sin(x)')%0A).properties(%0A%20%20%20%20title%3D'Sum%20of%20Sine%20Waves'%2C%0A%20%20%20%20width%3D500%2C%0A%20%20%20%20height%3D300%0A).interactive()%0A%0Asine_chart</marimo-cell-code>
 </marimo-island>
+<p>The Altair chart above shows the sum of two sine waves.</p>
+<p>You can adjust the parameters here:</p>
+<marimo-island data-app-id="main" data-cell-id="vblA" data-reactive="true">
+            <marimo-cell-output>
+            <span class="markdown prose dark:prose-invert"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><marimo-ui-element object-id="vblA-0" random-id="2e75d5c7-2b16-d6db-c462-caf36b7ddc0c"><marimo-slider data-initial-value="0.5" data-label="&quot;<span class=\&quot;markdown prose dark:prose-invert\&quot;><span class=\&quot;paragraph\&quot;>amplitude 1</span></span>&quot;" data-start="0" data-stop="5" data-step="0.01" data-steps="[]" data-debounce="false" data-disabled="false" data-orientation="&quot;horizontal&quot;" data-show-value="false" data-include-input="false" data-full-width="false"></marimo-slider></marimo-ui-element></td>
+<td><marimo-ui-element object-id="vblA-3" random-id="1c15a86b-e9ec-5d3d-d744-f18007b9853d"><marimo-slider data-initial-value="0.5" data-label="&quot;<span class=\&quot;markdown prose dark:prose-invert\&quot;><span class=\&quot;paragraph\&quot;>amplitude 2</span></span>&quot;" data-start="0" data-stop="5" data-step="0.01" data-steps="[]" data-debounce="false" data-disabled="false" data-orientation="&quot;horizontal&quot;" data-show-value="false" data-include-input="false" data-full-width="false"></marimo-slider></marimo-ui-element></td>
+</tr>
+<tr>
+<td><marimo-ui-element object-id="vblA-1" random-id="c640ae48-e470-5484-f9d9-69812e9b3502"><marimo-slider data-initial-value="1" data-label="&quot;<span class=\&quot;markdown prose dark:prose-invert\&quot;><span class=\&quot;paragraph\&quot;>frequency 1</span></span>&quot;" data-start="0" data-stop="100" data-steps="[]" data-debounce="false" data-disabled="false" data-orientation="&quot;horizontal&quot;" data-show-value="false" data-include-input="false" data-full-width="false"></marimo-slider></marimo-ui-element></td>
+<td><marimo-ui-element object-id="vblA-4" random-id="2fcba605-838e-6525-9054-73471c8ea3c5"><marimo-slider data-initial-value="1" data-label="&quot;<span class=\&quot;markdown prose dark:prose-invert\&quot;><span class=\&quot;paragraph\&quot;>frequency 2</span></span>&quot;" data-start="0" data-stop="100" data-steps="[]" data-debounce="false" data-disabled="false" data-orientation="&quot;horizontal&quot;" data-show-value="false" data-include-input="false" data-full-width="false"></marimo-slider></marimo-ui-element></td>
+</tr>
+<tr>
+<td><marimo-ui-element object-id="vblA-2" random-id="fbcc2174-1156-a9a0-1002-65bdd3f53846"><marimo-slider data-initial-value="0" data-label="&quot;<span class=\&quot;markdown prose dark:prose-invert\&quot;><span class=\&quot;paragraph\&quot;>offset 1</span></span>&quot;" data-start="0" data-stop="1" data-step="0.01" data-steps="[]" data-debounce="false" data-disabled="false" data-orientation="&quot;horizontal&quot;" data-show-value="false" data-include-input="false" data-full-width="false"></marimo-slider></marimo-ui-element></td>
+<td><marimo-ui-element object-id="vblA-5" random-id="69f0d233-1d83-93a6-4a4d-86beaa2cfb28"><marimo-slider data-initial-value="0" data-label="&quot;<span class=\&quot;markdown prose dark:prose-invert\&quot;><span class=\&quot;paragraph\&quot;>offset 2</span></span>&quot;" data-start="0" data-stop="1" data-step="0.01" data-steps="[]" data-debounce="false" data-disabled="false" data-orientation="&quot;horizontal&quot;" data-show-value="false" data-include-input="false" data-full-width="false"></marimo-slider></marimo-ui-element></td>
+</tr>
+</tbody>
+</table></span>
+            </marimo-cell-output>
+            <marimo-cell-code hidden="">amp1%20%3D%20mo.ui.slider(0%2C%205%2C%20value%3D0.5%2C%20step%3D0.01%2C%20label%3D%22amplitude%201%22)%0Afreq1%20%3D%20mo.ui.slider(0%2C%20100%2C%20value%3D1%2C%20label%3D%22frequency%201%22)%0Aofs1%20%3D%20mo.ui.slider(0%2C%201%2C%20value%3D0%2C%20step%3D0.01%2C%20label%3D%22offset%201%22)%0A%0Aamp2%20%3D%20mo.ui.slider(0%2C%205%2C%20value%3D0.5%2C%20step%3D0.01%2C%20label%3D%22amplitude%202%22)%0Afreq2%20%3D%20mo.ui.slider(0%2C%20100%2C%20value%3D1%2C%20label%3D%22frequency%202%22)%0Aofs2%20%3D%20mo.ui.slider(0%2C%201%2C%20value%3D0%2C%20step%3D0.01%2C%20label%3D%22offset%202%22)%0A%0Amo.md(f%22%22%22%0A%7C%20%20%7C%20%20%7C%0A%7C%20-------%20%7C%20-------%20%7C%0A%7C%20%7Bamp1%7D%20%20%7C%20%7Bamp2%7D%20%20%7C%0A%7C%20%7Bfreq1%7D%20%7C%20%7Bfreq2%7D%20%7C%0A%7C%20%7Bofs1%7D%20%20%7C%20%7Bofs2%7D%20%20%7C%0A%0A%22%22%22)%0A</marimo-cell-code>
+        </marimo-island>
 <marimo-island data-app-id="main" data-cell-id="bkHC" data-reactive="true">
     <marimo-cell-output>
     <span></span>
